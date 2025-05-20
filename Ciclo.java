@@ -1,20 +1,21 @@
 import java.util.Scanner;
-
+import javax.swing.JOptionPane;
 public class Ciclo {
 
     private static final Scanner scanner = new Scanner(System.in);
 
     public static int obtenerNumero(String mensaje) {
-        int numeroTemporal = 0;
-        while (numeroTemporal <= 0) {
-            System.out.println(mensaje + ": ");
-            numeroTemporal = scanner.nextInt();
+
+        int numerotemporal2 = 0;
+        while (numerotemporal2 <= 0) {
+           String numero = JOptionPane.showInputDialog("Ingresa el numero");
+            numerotemporal2 = Integer.parseInt(numero);
         }
-        return numeroTemporal;
+        return numerotemporal2;
     }
 
     public static void main(String[] args) {
-        int numero = obtenerNumero("Ingresa un numero positivo");
-        System.out.println("El numero es " + numero);
+        int numero = obtenerNumero("pato");
+        JOptionPane.showMessageDialog(null, "El numero es:"+numero);
     }
 }
