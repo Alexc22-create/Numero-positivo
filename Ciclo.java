@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Ciclo {
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static int obtenerNumero(String mensaje) {
+        int numeroTemporal = 0;
+        while (numeroTemporal <= 0) {
+            System.out.println(mensaje + ": ");
+            numeroTemporal = scanner.nextInt();
+        }
+        return numeroTemporal;
+    }
+
+    public static void main(String[] args) {
+        int numero = obtenerNumero("Ingresa un numero positivo");
+        System.out.println("El numero es " + numero);
+    }
+}
